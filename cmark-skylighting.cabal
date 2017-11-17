@@ -1,0 +1,34 @@
+name:                cmark-skylighting
+version:             0.1
+homepage:            https://github.com/thumphries/cmark-skylighting
+author:              Tim Humphries
+maintainer:          tim@utf8.me
+bug-reports:         https://github.com/thumphries/cmark-skylighting
+license:             BSD3
+license-file:        LICENSE
+category:            Text
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:
+  README.md
+
+synopsis:
+  Syntax highlighting for CMark via Skylighting
+description:
+  Syntax highlighting for CMark via Skylighting.
+
+source-repository head
+  type: git
+  location: git://github.com/thumphries/cmark-skylighting.git
+
+library
+  default-language:  Haskell2010
+  hs-source-dirs:    src
+  ghc-options:       -Wall
+  build-depends:
+                     base                           >= 4.9           && < 4.11
+                   , cmark                          == 0.5.*
+                   , skylighting
+
+  exposed-modules:
+                     CMark.Skylighting
